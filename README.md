@@ -4,19 +4,21 @@ funny little script for getting historical dates from wikipedia on the command l
 
 usage:
 
-> gethistory 1789
+`gethistory 1789`
 
-get the english wikipedia information on the command line
+gets the english wikipedia information on the command line
 
-# gethistory 1789 de
+`gethistory 1789 de`
 
--> receive the german wikipedia information in german
+-> receive the german wikipedia information
 
 you can also get the spanish (es), italian (it), french (fr), polish (pl) if you like
 
 # gethistory -333 it
 
 gets the italian wikipedia text for the year 333 BC for example
+
+
 
 
 
