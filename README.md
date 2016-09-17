@@ -38,9 +38,9 @@ on ubuntu/debian install requirements via
 # git clone https://github.com/typotraum/gethistory/
 # cd gethistory
 # sudo cp gethistory /usr/bin/gethistory
-# chmod a+rx /usr/bin/gethistory
+# sudo chmod a+rx /usr/bin/gethistory
 ```
-
+have fun
 
 
 
