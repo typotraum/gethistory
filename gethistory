@@ -7,9 +7,6 @@ if [ "$LANG" != "" ]
   else LANG='en'
 fi
 
-
-
-
 C=0
 YEAR=$1
 
@@ -28,7 +25,6 @@ case "$LANG" in
 esac
 	}
 
-
 if [ "$1" -lt "$C" ]
 then
   YEAR=$((-$1))   
@@ -39,11 +35,8 @@ fi
 
 JSON=$(wget 'https://'$LANG'.wikipedia.org/w/api.php?action=query&format=json&servedby=1&prop=extracts&list=&meta=&utf8=1&uselang='$LANG'&titles='$YEAR$BC -q -O -)
 
-#JSON=$(wget 'https://de.wikipedia.org/w/api.php?action=query&format=json&servedby=1&prop=extracts&list=&meta=&utf8=1&uselang=de&titles=333'$BC -q -O -)
-
 VAR=$(echo ${JSON} | jq -r '.query.pages[].extract')
 
 touch /tmp/gethistory
 echo "$VAR" > /tmp/gethistory
 html2text -utf8 /tmp/gethistory | more
-
