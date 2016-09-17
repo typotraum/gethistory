@@ -4,7 +4,7 @@ funny little script for getting historical dates from wikipedia on the command l
 
 usage:
 
-# gethistory 1789
+> gethistory 1789
 
 get the english wikipedia information on the command line
 
