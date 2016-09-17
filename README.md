@@ -40,7 +40,7 @@ on ubuntu/debian install requirements via
 # sudo cp gethistory /usr/bin/gethistory
 # sudo chmod a+rx /usr/bin/gethistory
 ```
-have fun
+don't forget to work and have fun
 
 
 
