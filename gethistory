@@ -22,6 +22,8 @@ case "$LANG" in
   fr)   BC='_av._J.-C.';;
   li)   BC='_v._Chr.';;
   pl)   BC='_p.n.e.';;
+  zn)   BC='年'; PRE='前';;
+  
 esac
 	}
 
