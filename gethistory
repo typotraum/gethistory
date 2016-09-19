@@ -9,11 +9,14 @@ fi
 
 C=0
 YEAR=$1
+BC=''
+PRE=''
 
 #echo $YEAR
 
 geturl() {
 BC='_BC'
+
 case "$LANG" in
   es)   BC="_a._C." ;;
   it)   BC="_a.C." ;;
@@ -22,10 +25,13 @@ case "$LANG" in
   fr)   BC='_av._J.-C.';;
   li)   BC='_v._Chr.';;
   pl)   BC='_p.n.e.';;
-  zn)   BC='年'; PRE='前';;
-  
+  zh)   BC='年'; PRE='前';;
 esac
 	}
+
+case "$LANG" in
+  zh) BC='年';;
+esac
 
 if [ "$1" -lt "$C" ]
 then
@@ -33,11 +39,14 @@ then
   geturl
 fi
 
+URL="https://$LANG.wikipedia.org/w/api.php?action=query&format=json&servedby=1&prop=extracts&list=&meta=&utf8=1&uselang=$LANG&titles=$PRE$YEAR$BC"
 
+# echo $URL
 
-JSON=$(wget 'https://'$LANG'.wikipedia.org/w/api.php?action=query&format=json&servedby=1&prop=extracts&list=&meta=&utf8=1&uselang='$LANG'&titles='$YEAR$BC -q -O -)
+JSON=$(wget $URL -q -O -)
 
 VAR=$(echo ${JSON} | jq -r '.query.pages[].extract')
+
 
 touch /tmp/gethistory
 echo "$VAR" > /tmp/gethistory
