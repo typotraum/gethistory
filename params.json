@@ -1,0 +1,6 @@
+{
+  "name": "Gethistory",
+  "tagline": "funny little script for getting historical dates from wikipedia on the command line. ",
+  "body": "# gethistory\r\n\r\nlittle script for getting historical dates from wikipedia on the command line. \r\n\r\nusage:\r\n\r\n```\r\n# gethistory 1789\r\n```\r\n\r\ngets the english wikipedia information on the command line\r\n\r\n```\r\n# gethistory 1789 de\r\n```\r\n-> receive the german wikipedia information\r\n\r\nyou can also get the spanish (es), italian (it), french (fr), polish (pl), chinese(zh) if you like\r\n```\r\n# gethistory -333 it\r\n```\r\n\r\ngets the italian wikipedia text for the year 333 BC for example\r\n\r\n##requirements\r\n\r\nthe script uses [jq](https://stedolan.github.io/jq/) for parsing the json response, [html2text](https://github.com/aaronsw/html2text) for formating the html on the console\r\n\r\non ubuntu/debian install requirements via\r\n\r\n```\r\n# sudo apt-get install jq html2text\r\n```\r\n\r\n##install the script\r\n\r\n```\r\n# git clone https://github.com/typotraum/gethistory/\r\n# cd gethistory\r\n# sudo cp gethistory /usr/bin/gethistory\r\n# sudo chmod a+rx /usr/bin/gethistory\r\n```\r\ndon't forget to work and have fun\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
