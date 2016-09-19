@@ -1,6 +1,6 @@
 # gethistory
 
-funny little script for getting historical dates from wikipedia on the command line. 
+little script for getting historical dates from wikipedia on the command line. 
 
 usage:
 
@@ -15,7 +15,7 @@ gets the english wikipedia information on the command line
 ```
 -> receive the german wikipedia information
 
-you can also get the spanish (es), italian (it), french (fr), polish (pl) if you like
+you can also get the spanish (es), italian (it), french (fr), polish (pl), chinese(zh) if you like
 ```
 # gethistory -333 it
 ```
