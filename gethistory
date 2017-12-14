@@ -41,11 +41,11 @@ fi
 
 URL="https://$LANG.wikipedia.org/w/api.php?action=query&format=json&servedby=1&prop=extracts&list=&meta=&utf8=1&uselang=$LANG&titles=$PRE$YEAR$BC"
 
-# echo $URL
+ echo $URL
 
 JSON=$(wget $URL -q -O -)
 
-VAR=$(echo ${JSON} | jq -r '.query.pages[].extract')
+VAR=$(echo ${JSON} | tr -d '\000-\015' |jq -r '.query.pages[].extract')
 
 
 touch /tmp/gethistory
